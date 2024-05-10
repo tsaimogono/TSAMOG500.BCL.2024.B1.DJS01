@@ -25,6 +25,17 @@ const calcNewVel = ({vel, acc, time}) => {
   }
 }
 
+ // function to calculate new distance and check for correct units
+ const newDistance = ({vel,time:time,d:d})=>{
+  if(vel[1]==='km/h'&& time[1]==='s' && d[1]==='km'){
+   return d[0] + vel[0]*time[0]/3600
+  }
+  else{
+   alert('Please use the correct units')
+  }
+}
+
+
 console.log(`Corrected New Velocity: ${vel2} km/h`);
 console.log(`Corrected New Distance: ${d2} km`);
 console.log(`Corrected Remaining Fuel: ${rf} kg`);
