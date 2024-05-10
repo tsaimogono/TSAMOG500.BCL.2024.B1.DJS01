@@ -49,7 +49,7 @@ const calcNewVel = ({vel, acc, time}) => {
  const rf = fuelRemaining(props) //calculates remaining fuel
  const vel2 = calcNewVel(props) //calculates new velocity based on acceleration
  
- 
+
  console.log(`Corrected New Velocity: ${vel2} km/h`);
  console.log(`Corrected New Distance: ${d2} km`);
  console.log(`Corrected Remaining Fuel: ${rf} kg`);
