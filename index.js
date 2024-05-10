@@ -43,10 +43,6 @@ const calcNewVel = ({vel, acc, time}) => {
   else{
    alert('Please use the correct units')
   }
-}
-
-
 console.log(`Corrected New Velocity: ${vel2} km/h`);
 console.log(`Corrected New Distance: ${d2} km`);
 console.log(`Corrected Remaining Fuel: ${rf} kg`);
-
