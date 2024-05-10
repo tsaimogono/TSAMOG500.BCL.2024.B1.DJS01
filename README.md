@@ -83,3 +83,15 @@ This challenge invites students to debug, refactor, and enhance JavaScript funct
  - New Velocity: Displays the calculated new velocity in km/h.
  - New Distance: Displays the calculated new distance in km.
  - Remaining Fuel: Displays the calculated remaining fuel in kg.
+ 
+## Feedback
+
+- The code is well-structured and readable.
+- Error handling for incorrect units of measurement is helpful for debugging and preventing calculation errors.
+
+## Challenges
+
+- Extend the script to handle different units of measurement (e.g., miles, pounds, gallons) and automatically convert them to the appropriate units before performing calculations.
+- Add additional calculations, such as time to reach a certain distance or fuel efficiency.
+- Improve error handling to provide more specific error messages for different types of errors (e.g., missing parameters, invalid values).
+- Create a user interface to input parameter values and display the results.
