@@ -14,14 +14,15 @@ const props = {
   fuel : [5000,'kg'], // remaining fuel (kg)
   fbr : [0.5,'kg/s'] // fuel burn rate (kg/s)
  }
-const d2 = d + (vel*time) //calcultes new distance
-
-const rf = fbr*time //calculates remaining fuel
-const vel2 = calcNewVel(acc, vel, time) //calculates new velocity based on acceleration
 
 // Pick up an error with how the function below is called and make it robust to such errors
-calcNewVel = (vel, acc, time) => { 
-  return vel + (acc*time)
+const calcNewVel = ({vel, acc, time}) => { 
+  if(vel[1]==='km/h'&& acc[1]==='m/s^2'&& time[1]==='s'){
+  return vel[0] + (acc[0]*time[0])*(3600/1000)
+  }
+  else{
+    alert('Please use the correct units')
+  }
 }
 
 console.log(`Corrected New Velocity: ${vel2} km/h`);
