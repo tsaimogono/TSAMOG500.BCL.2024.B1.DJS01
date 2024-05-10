@@ -44,3 +44,42 @@ This challenge invites students to debug, refactor, and enhance JavaScript funct
 1. Enhance code readability for easier debugging.
 2. Identify and correct calculation errors.
 3. Improve the robustness of calculations. If incorrect units are used or other errors are detected, the code should notify the user instead of producing an incorrect result.
+
+ # Readme
+ 
+ ## Description
+ This script calculates new velocity, new distance, and remaining fuel based on given parameters. It includes error handling for incorrect units of measurement and improves readability.
+ 
+ ## Parameters
+ The `props` object contains the following properties:
+ - `vel`: Array containing velocity value in km/h and its unit as strings.
+ - `acc`: Array containing acceleration value in m/s^2 and its unit as strings.
+ - `time`: Array containing time value in seconds and its unit as strings.
+ - `d`: Array containing distance value in km and its unit as strings.
+ - `fuel`: Array containing fuel value in kg and its unit as strings.
+ - `fbr`: Array containing fuel burn rate value in kg/s and its unit as strings.
+ 
+ ## Functions
+ ### calcNewVel(props)
+ Calculates new velocity based on initial velocity, acceleration, and time. It checks for correct units and throws an error if units are incorrect.
+ 
+ ### newDistance(props)
+ Calculates new distance based on initial velocity, time, and initial distance. It checks for correct units and throws an error if units are incorrect.
+ 
+ ### fuelRemaining(props)
+ Calculates remaining fuel based on initial fuel, time, and fuel burn rate. It checks for correct units and throws an error if units are incorrect.
+ 
+ ## Usage
+ - Call `calcNewVel(props)` to calculate new velocity.
+ - Call `newDistance(props)` to calculate new distance.
+ - Call `fuelRemaining(props)` to calculate remaining fuel.
+ 
+ ## Debugging
+ - Ensure all parameter values have the correct units of measurement.
+ - Check the input values and types passed to the functions.
+ - Verify the calculations are performed as expected.
+ 
+ ## Output
+ - New Velocity: Displays the calculated new velocity in km/h.
+ - New Distance: Displays the calculated new distance in km.
+ - Remaining Fuel: Displays the calculated remaining fuel in kg.
