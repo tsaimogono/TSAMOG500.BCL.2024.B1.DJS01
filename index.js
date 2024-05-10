@@ -15,6 +15,12 @@ const props = {
   fbr : [0.5,'kg/s'] // fuel burn rate (kg/s)
  }
 
+/**
+ * Calculates new distance based on initial velocity, time, and initial distance.
+ * Checks for correct units and alerts the user if incorrect units are used.
+ * @param {Object} props - Object containing parameters for calculation
+ * @returns {number | undefined} - New distance value or undefined if units are incorrect
+ */
 // Pick up an error with how the function below is called and make it robust to such errors
 const calcNewVel = ({vel, acc, time}) => { 
   if(vel[1]==='km/h'&& acc[1]==='m/s^2'&& time[1]==='s'){
@@ -45,14 +51,16 @@ const calcNewVel = ({vel, acc, time}) => {
   }
  }
 
+// Perform calculations using the provided parameters
  const d2 = newDistance(props) //calcultes new distance
  const rf = fuelRemaining(props) //calculates remaining fuel
  const vel2 = calcNewVel(props) //calculates new velocity based on acceleration
  
-
+// Log calculated values for debugging purposes
  console.log(`Corrected New Velocity: ${vel2} km/h`);
  console.log(`Corrected New Distance: ${d2} km`);
  console.log(`Corrected Remaining Fuel: ${rf} kg`);
+ 
  
  
  
